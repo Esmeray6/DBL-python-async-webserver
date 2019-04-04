@@ -32,6 +32,7 @@ class TestServer(commands.Cog):
             headers = dict(request.headers)
             authorization = headers.get('Authorization')
             if authorization == webserver_password:
+                print("New upvote!")
                 user_id = int(data.get('user'))
                 bot_id = int(data.get('bot')) # ID of the bot that was upvoted
                 request_type = data.get('type')
@@ -71,7 +72,7 @@ class TestServer(commands.Cog):
 
                 return web.Response() # OK
             else:
-                print(f"Wrong password: {authorization}")
+                print(f"Wrong password:\nAuthorization header: {authorization}\nWebserver password: {webserver_password}")
                 return web.Response(status=403) # Password is wrong
 
         async def testing(self):
