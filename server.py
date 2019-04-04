@@ -76,7 +76,7 @@ class TestServer(commands.Cog):
                 return web.Response(status=403) # Password is wrong
 
         async def testing(self):
-            return web.Response(text=whatever)
+            return web.Response(text="It works!")
 
         app = web.Application(loop=self.bot.loop)
         app.router.add_post('/dblwebhook', handler)
