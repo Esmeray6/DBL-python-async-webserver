@@ -12,6 +12,8 @@ An aiohttp webserver made for usage in discord.py bot cogs to keep track of upvo
 
 ## Setting up
 
+On Windows, you will have to open port 5000 on your router.
+
 ### Running
 
 1. Put `webserver_settings.json` and `server.py` into your bot's cogs folder.
