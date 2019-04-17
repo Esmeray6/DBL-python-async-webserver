@@ -7,7 +7,7 @@ An aiohttp webserver made for usage in discord.py bot cogs to keep track of upvo
   * [pymongo](https://api.mongodb.com/python/current/installation.html)
 * [Python3.6+](https://www.python.org/downloads/release/python-360/)
 * [Git](https://git-scm.com/downloads)
-* discord.py rewrite (v1.0.0+) `python -m pip install -U git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]` for Windows or `pip3 install -U git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]` for Linux and MacOS.
+* discord.py rewrite (v1.0.0+) `python -m pip install -U discord.py` for Windows or `pip3 install -U discord.py` for Linux and MacOS.
   (Incompatible with discord.py async (0.16.12). Your bot has to use `rewrite` version.)
 
 ## Setting up
