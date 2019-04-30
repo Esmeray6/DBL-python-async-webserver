@@ -75,7 +75,7 @@ class TestServer(commands.Cog):
                 print(f"Wrong password:\nAuthorization header: {authorization}\nWebserver password: {webserver_password}")
                 return web.Response(status=403) # Password is wrong
 
-        async def testing(self):
+        async def testing(request):
             return web.Response(text="It works!")
 
         app = web.Application(loop=self.bot.loop)
