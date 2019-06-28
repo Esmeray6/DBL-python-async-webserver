@@ -33,8 +33,8 @@ class TestServer(commands.Cog):
             authorization = headers.get('Authorization')
             if authorization == webserver_password:
                 print("New upvote!")
-                user_id = int(data.get('user'))
-                bot_id = int(data.get('bot')) # ID of the bot that was upvoted
+                user_id = data.get('user')
+                bot_id = data.get('bot') # ID of the bot that was upvoted
                 request_type = data.get('type')
                 weekend_status = data.get('isWeekend')
                 now = datetime.datetime.utcnow()
@@ -66,9 +66,9 @@ class TestServer(commands.Cog):
                     embed_title = "Test" if request_type == 'test' else 'New upvote!'
                     embed = discord.Embed(title=embed_title, description=f"{upvoter}\n{upvoted_bot}", timestamp=now, color=discord.Color.green())
 
-                async with ClientSession() as session:
-                    webhook = discord.Webhook.from_url(discord_webhook, adapter=discord.AsyncWebhookAdapter(session))
-                    await webhook.send(embed=embed)
+	                async with ClientSession() as session:
+	                    webhook = discord.Webhook.from_url(discord_webhook, adapter=discord.AsyncWebhookAdapter(session))
+	                    await webhook.send(embed=embed)
 
                 return web.Response() # OK
             else:
