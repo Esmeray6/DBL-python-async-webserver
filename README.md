@@ -25,6 +25,6 @@ If you want this webserver to post a message in a certain channel when someone v
 
 1. Create a webhook in preferred channel.
 2. Copy the webhook URL.
-3. Open `settings.json` with any text editor.
+3. Open `webserver_settings.json` with any text editor.
 4. In `discord_webhook_url` field, enter the webhook URL.
 5. Save the file.
